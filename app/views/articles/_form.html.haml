@@ -1,0 +1,6 @@
+=simple_form_for(@article, html: {class: 'form-horizontal'}) do |f|
+  =f.collection_select :category_id, Category.all, :id, :name, {promt: "Elige una categoria"}
+  =f.input :title, label: "Titulo del Articulo"
+  =f.input :description, label: "Descripcion del Articulo"
+  =f.input :price, label: "Precio del Articulo"
+  =f.button :submit

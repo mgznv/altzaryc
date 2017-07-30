@@ -1,0 +1,7 @@
+%p#notice= notice
+%h1 Articles
+
+-@articles.each do |article|
+  %h2= link_to article.title, article
+
+= link_to 'New Article', new_article_path
